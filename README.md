@@ -7,9 +7,9 @@
 ---
 ### [OverTheWire](./OverTheWire)
 
-| Name               | Difficulty | Related Topic       | Writeup                                |
-| ------------------ | ---------- | ------------------- | -------------------------------------- |
-| Bandit / LVL 0-33) | Easy       | Linux Foundomentals | [View](./OverTheWire/BanditLVL0-33.md) |
+| Name              | Difficulty | Related Topic       | Writeup                                |
+| ----------------- | ---------- | ------------------- | -------------------------------------- |
+| Bandit / LVL 0-33 | Easy       | Linux Foundomentals | [View](./OverTheWire/BanditLVL0-33.md) |
 
 ### [VoorivexAcademy](./VoorivexAcademy)
 
