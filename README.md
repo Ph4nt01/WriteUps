@@ -5,9 +5,6 @@
 > > Main Category = Web
 
 ---
-
-## 🔐 WriteUps
-
 ### [OverTheWire](./OverTheWire)
 
 | Name               | Difficulty | Related Topic       | Writeup                                |
@@ -29,7 +26,6 @@
 | Insp3ct0r       | Easy       | Web / DevTools | [View](./picoCTF/insp3ct0r.md)       |
 | Local Authority | Easy       | Web / DevTools | [View](./picoCTF/local_authority.md) |
 
-
 ---
 
 
@@ -40,5 +36,4 @@ All my writeups are generated using [WB-WriteupBuilder](https://github.com/Ph4nt
 
 <p align="center">
   Made by <a href="https://github.com/Ph4nt01">Ph4nt01</a><br>
-  <em>🚀</em>
 </p>
