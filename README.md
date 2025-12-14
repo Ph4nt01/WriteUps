@@ -1,7 +1,8 @@
 
-# CTF-WriteUps
+# WriteUps
 
-> A collection of my Capture The Flag (CTF) writeups (mainly web).
+> A collection of my personal writeups (CTFs, Challenges, Labs and etc).
+> > Main Category = Web
 
 ---
 
