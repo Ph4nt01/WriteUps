@@ -8,8 +8,8 @@
 ### [Challenginno](./Challenginno)
 | Name            | Difficulty | Related Topic  | Writeup                              |
 | --------------- | ---------- | -------------- | ------------------------------------ |
-| Online Password Attack           | Easy       | Network / Initial Access  | [View](./CHallenginno/online_password_attack.md)           |
-| Vulnerable SSH Service       | Medium       | Network / Initial Access | [View](./CHallenginno/vulnerable_ssh_service.md)       |
+| Online Password Attack           | Easy       | Network / Initial Access  | [View](./Challenginno/online_password_attack.md)           |
+| Vulnerable SSH Service       | Medium       | Network / Initial Access | [View](./Challenginno/vulnerable_ssh_service.md)       |
 
 ### [OverTheWire](./OverTheWire)
 
