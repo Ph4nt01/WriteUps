@@ -217,12 +217,12 @@ Therefore, I needed to investigate other exposed files, particularly backup file
 I used FFUF to search for files ending in `.php.bak`:
 
 ```bash
-ffuf -u http://192.168.215.136/lab/FUZZ.php.bak \
+ffuf -u http://192.168.215.136/xxx/FUZZ.php.bak \
 -w /usr/share/dirb/wordlists/big.txt
 ```
 
 ```text
-└─$ ffuf -u http://192.168.215.136/lab/FUZZ.php.bak -w /usr/share/dirb/wordlists/big.txt
+└─$ ffuf -u http://192.168.215.136/xxx/FUZZ.php.bak -w /usr/share/dirb/wordlists/big.txt
         /'___\  /'___\           /'___\
        /\ \__/ /\ \__/  __  __  /\ \__/
        \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\
@@ -255,7 +255,7 @@ One of the discovered files was accessible and automatically downloaded when I v
 After inspecting it, I found an interesting section containing the administrator's credentials.
 
 ```bash
-cat login.php.bak | grep admin
+cat xxxxx.php.bak | grep admin
 ```
 
 Output:
