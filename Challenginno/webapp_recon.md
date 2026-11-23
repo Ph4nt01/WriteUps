@@ -264,7 +264,7 @@ Output:
 #if ($user == "admin" && $pwd == "xxxxxx") {
 ```
 
-<badge color="success">Flag 8</badge> **The administrator password was discovered inside the exposed `login.php.bak` backup file: `xxxxxx`.**
+<badge color="success">Flag 8</badge> **The administrator password was discovered inside the exposed `xxxxx.php.bak` backup file: `xxxxxx`.**
 
 Initially, I tried using these credentials on the login page, but authentication failed.
 
