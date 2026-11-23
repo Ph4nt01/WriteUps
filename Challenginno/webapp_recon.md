@@ -206,12 +206,6 @@ These credentials were stored in the exposed SQL dump and could be used to authe
 
 <badge color="success">Flag 7</badge> **The username and password were obtained from the exposed `lab.sql` database dump.**
 
-For example, one of the valid credential pairs was:
-
-```text
-test1 : 123456
-```
-
 I used these credentials to successfully log in to the application.
 
 ## 4. Discovering the Administrator Password
@@ -267,10 +261,10 @@ cat login.php.bak | grep admin
 Output:
 
 ```php
-#if ($user == "admin" && $pwd == "123321321321") {
+#if ($user == "admin" && $pwd == "xxxxxx") {
 ```
 
-<badge color="success">Flag 8</badge> **The administrator password was discovered inside the exposed `login.php.bak` backup file: `123321321321`.**
+<badge color="success">Flag 8</badge> **The administrator password was discovered inside the exposed `login.php.bak` backup file: `xxxxxx`.**
 
 Initially, I tried using these credentials on the login page, but authentication failed.
 
@@ -284,7 +278,7 @@ Nevertheless, the password was accepted by the CTF platform as the correct answe
 
 To find the final flag, I continued investigating the application using the valid user credentials discovered earlier.
 
-After logging in as `test1`, I navigated to the previously discovered application page:
+After logging in as `xxxx`, I navigated to the previously discovered application page:
 
 ```text
 /xxx/xxx-xxx.php
