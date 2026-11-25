@@ -69,6 +69,6 @@ flag is xxx_xxxxx_xxxxx
 
 # 📚 Takeaways
 
- - `legba` is way faster than `hydra` and `medusa` for ssh dictionary force
+ - `legba` is way faster than `hydra` and `medusa` for ssh dictionary attack
 
 ---
