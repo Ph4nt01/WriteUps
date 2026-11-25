@@ -1,10 +1,6 @@
-# 📋 Initial Info:
 
-![img](./imgs/lab01-1.png)
 
----
-
-# 🔍 Initial Analysis:
+# Lab01
 
 - first i ran netdiscover to findout the ip of vm:
 ![img](./imgs/1.png)
