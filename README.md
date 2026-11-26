@@ -13,6 +13,7 @@
 | Online Password Attack | Easy       | Network / Initial Access | [View](./Challenginno/online_password_attack.md) | [View](https://challenginno.ir/challenge/online-password-attack) |
 | Vulnerable SSH Service | Medium     | Network / Initial Access | [View](./Challenginno/vulnerable_ssh_service.md) | [View](https://challenginno.ir/challenge/vulnerable-ssh-service) |
 | Web App Recon          | Medium     | Web / Recon              | [View](/Challenginno/webapp_recon.md)            | [View](https://challenginno.ir/challenge/web-reconnaissance)     |
+| NamAvar Competition          | Medium     | Web / Recon / Network / Exploitation              | [Lab01](/Challenginno/namavar_competition_lab01.md) [Lab02](/Challenginno/namavar_competition_lab02.md) [Lab03](/Challenginno/namavar_competition_lab03.md)              |     |
 
 ### [picoCTF](./picoCTF)
 
@@ -21,7 +22,6 @@
 | logon           | Easy       | Web / Cookies  | [View](./picoCTF/logon.md)           | [View](https://learn.cylabacademy.org/library?page=1&search=logon)           |
 | Insp3ct0r       | Easy       | Web / DevTools | [View](./picoCTF/insp3ct0r.md)       | [View](https://learn.cylabacademy.org/library?page=1&search=Insp3ct0r)       |
 | Local Authority | Easy       | Web / DevTools | [View](./picoCTF/local_authority.md) | [View](https://learn.cylabacademy.org/library?page=1&search=Local+Authority) |
-
 
 ### [VoorivexAcademy](./VoorivexAcademy)
 
@@ -34,7 +34,6 @@
 | Name              | Difficulty | Related Topic       | Writeup                                | Link to the Origin                            |
 | ----------------- | ---------- | ------------------- | -------------------------------------- | ------------------------------------------------ |
 | Bandit / LVL 0-33 | Easy       | Linux Foundomentals | [View](./OverTheWire/BanditLVL0-33.md) | [View](https://overthewire.org/wargames/bandit/) |
-
 
 ---
 
