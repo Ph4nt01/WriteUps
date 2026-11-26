@@ -9,9 +9,11 @@
 | 🎯 Points       | 8                                        |
 
 ---
+
 # Initial Info
 
 ![img](./imgs/lab01.png)
+
 1. Enter the flag located on the server’s non-standard port. (2 points)
 2. Enter the flag associated with the Telnet service. (2 points)
 3. Enter the list of three users on the mail server according to the guide. (2 points)
@@ -20,14 +22,18 @@
 ---
 
 # Initial Analysis
+
 First i ran the command `netdiscover` to find out the IP of the target:
 ![img](./imgs/1.png)
 
 Then i ran `nmap -p- -sS -sV -T5` on the target to see what is running on its ports and perform service discovery on the target:
 ![imgs](./imgs/2.png)
 > `-p-` Scans all ports of the target
+
 > `-sS` Performs a TCP SYN scan; sends a SYN packet but does not compelte the TCP handshake which makes it faster and stealthier
+
 > `-sV` Performs service and version detection
+
 > `-T5` This is the most aggressive speed settings (minimal delays between scans), this makes the scan fast but can lower accuracy on slow networks (not recommended in real world enviroments)
 
 As we see there is a few ports we can investigate further
@@ -42,7 +48,6 @@ First I tried the unusual port `31337` and attempted to connect to it manually v
 > `-n` Skips DNS resolution which makes the connecting process a little faster
 > `-v` Shows connection details
 
-
 Then i tried connecting to port `23` which nmap told us that its running telnet, and it was in fact running telnet and gave me the next flag as soon as i connect to it via `telnet` command:
 ![imgs](./imgs/4.png)
 
@@ -52,9 +57,10 @@ For the next flag objective (users on mail server), i tried enumerating SMTP and
 > `-U jasem.txt` Gives the tool the path to username wordlist for enumeration
 > `t <target-IP>` Gives the tool the target IP
 
-
 To upload a file to the target server (which is the objective for the next flag) i did the below actions:
+
 - First i created a test file, Then i tried uploading that file via `curl` and `POST` `PUT` methods and it was unsuccessful:
+
 ```sh
 touch test.txt && echo "jasem" > test.txt
 
@@ -88,6 +94,7 @@ Content-Length: 357
     </body>
 </html>
 ```
+
 > `-i` Tells curl to include the HTTP response headers in the output (shows status codes, server type, etc.).
 > `-T` Uploads the file to the target URL using `PUT` method
 > `-X` Tells curl to use specified HTTP method
@@ -99,6 +106,7 @@ Content-Length: 357
 - After researching about the `PROPFIND` http method and trying it out i found out that it is not supported by the server although `OPTIONS` says otherwise
 
 - Then i ran `dirb` command to find the right directory which supports `PUT` or `POST` for us to upload the file:
+
 ```sh
 dirb http://192.168.215.138/ /usr/share/wordlists/dirb/common.txt
 -----------------
@@ -128,6 +136,7 @@ Allow: OPTIONS, GET, HEAD, PUT
 ```
 
 - And after finding the right directory i uploaded the file and it was successful but it did not gave me the flag for objective 4 of the challenge...:
+
 ```sh
 curl -i -T test.txt http://192.168.215.138/upload/
 HTTP/1.0 201 Created
@@ -148,6 +157,7 @@ jasem
 ```
 
 - After trying a bunch of times and failing, i found out that the `flag.txt` was already there and there was no need for the file upload at all:
+
 ```sh
 curl -i http://192.168.215.138/upload/
 HTTP/1.0 200 OK
@@ -190,5 +200,5 @@ WebserverFlag-Scanning
 - Never assume a method is actually supported just because it appears in the `Allow` header.
 - `dirb` is a useful tool for directory enumeration of the target web server; always run it in this kind of challenges
 - You can do alot with `curl`
----
 
+---
