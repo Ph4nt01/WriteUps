@@ -50,6 +50,7 @@ First I tried the unusual port `31337` and attempted to connect to it manually v
 > `-v` Shows connection details
 
 Then i tried connecting to port `23` which nmap told us that its running telnet, and it was in fact running telnet and gave me the next flag as soon as i connect to it via `telnet` command:
+
 ![imgs](./imgs/4.png)
 
 For the next flag objective (users on mail server), i tried enumerating SMTP and finding the users with `smtp-user-enum -M VRFY -U ~/top-usernames.txt -t <target-ip>` command:

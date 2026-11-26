@@ -62,7 +62,8 @@ I selected the first option via the command `use 0` and ran `show options` to se
 ![imgs](./imgs/9.png)
 
 Then i selected the right options for the target and run the exploit:
-> `set SSL false` Because the target apache server is not running on 443 and metasploit will fails to connect to the target if its true (its true by default) ``
+> `set SSL false` Because the target apache server is not running on 443 and metasploit will fail to connect to the target if its true (its true by default)
+
 ![imgs](./imgs/10.png)
 ![imgs](./imgs/11.png)
 
@@ -79,17 +80,17 @@ And finally used `meterpreter` search command `search -F *flag*` and found the f
 
 - Why Use Meterpreter? While a standard shell provides basic command execution, upgrading to a Meterpreter session offers significant tactical advantages for post-exploitation:
   - In-Memory Stealth:
-      - Operates entirely in memory rather than writing to disk using a technique called Reflective DLL Injection (RDI), which makes it stealthier and harder for traditional antivirus software to detect.
+    - Operates entirely in memory rather than writing to disk using a technique called Reflective DLL Injection (RDI), which makes it stealthier and harder for traditional antivirus software to detect.
   - Rich Built-in Toolkit:
-      - Replaces reliance on native OS commands with powerful built-in tools (e.g., `sysinfo` for enumeration, `hashdump` for credential harvesting, `getsystem` for privilege escalation and etc...).
+    - Replaces reliance on native OS commands with powerful built-in tools (e.g., `sysinfo` for enumeration, `hashdump` for credential harvesting, `getsystem` for privilege escalation and etc...).
   - Seamless File Transfer:
-      - Includes native `upload` and `download` commands, eliminating the need to use target-native tools like wget or curl.
+    - Includes native `upload` and `download` commands, eliminating the need to use target-native tools like wget or curl.
   - Network Pivoting:
-      - Features a built-in `portfwd` command to easily route traffic through the compromised host into internal networks.
+    - Features a built-in `portfwd` command to easily route traffic through the compromised host into internal networks.
   - Process Migration:
-      - Allows you to migrate the session into another running process. This is crucial for stabilizing the connection (if the original process crashes) or evading detection by blending in with legitimate applications.
+    - Allows you to migrate the session into another running process. This is crucial for stabilizing the connection (if the original process crashes) or evading detection by blending in with legitimate applications.
   - Streamlined Post-Exploitation:
-      - Acts as a direct bridge to Metasploit’s extensive library of post-exploitation modules, allowing you to run advanced attacks directly from the session.
+    - Acts as a direct bridge to Metasploit’s extensive library of post-exploitation modules, allowing you to run advanced attacks directly from the session.
 
 - Does it always work?
   - No. Meterpreter is not guaranteed to work on every system.
