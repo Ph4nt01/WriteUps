@@ -46,6 +46,7 @@ First I tried the unusual port `31337` and attempted to connect to it manually v
 
 ![imgs](./imgs/3.png)
 > `-n` Skips DNS resolution which makes the connecting process a little faster
+
 > `-v` Shows connection details
 
 Then i tried connecting to port `23` which nmap told us that its running telnet, and it was in fact running telnet and gave me the next flag as soon as i connect to it via `telnet` command:
@@ -54,7 +55,9 @@ Then i tried connecting to port `23` which nmap told us that its running telnet,
 For the next flag objective (users on mail server), i tried enumerating SMTP and finding the users with `smtp-user-enum -M VRFY -U ~/top-usernames.txt -t <target-ip>` command:
 ![imgs](./imgs/5.png)
 > `-M VRFY` Sets the enumeration method to `VRFY`; tells the server to verify if a user exist or not
+
 > `-U jasem.txt` Gives the tool the path to username wordlist for enumeration
+
 > `t <target-IP>` Gives the tool the target IP
 
 To upload a file to the target server (which is the objective for the next flag) i did the below actions:
@@ -96,8 +99,11 @@ Content-Length: 357
 ```
 
 > `-i` Tells curl to include the HTTP response headers in the output (shows status codes, server type, etc.).
+
 > `-T` Uploads the file to the target URL using `PUT` method
+
 > `-X` Tells curl to use specified HTTP method
+
 > `-F` Gives curl the file path
 
 - Then I ran `curl -i -X OPTIONS` to see what methods does it actually allow:
